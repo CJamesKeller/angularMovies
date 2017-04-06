@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Chi MEAN</title>
@@ -12,7 +12,27 @@
 
   </head>
   <body>
-
+    <div class="col-md-3 col-xs-4" ng-controller="FirstController">
+      <input type="text" ng-model="newMovie.name" placeholder="movie name">
+      <br>
+      <input type="text" ng-model="newMovie.desc" placeholder="movie description">
+      <br>
+      <input type="text" ng-model="newMovie.director" placeholder="director name">
+      <br>
+      <input type="text" ng-model="newMovie.length" placeholder="movie length">
+      <br>
+      <button type="button" ng-click="addMovie(newMovie.name, newMovie.desc, newMovie.director, newMovie.length)">Submit</button>
+    </div>
+    <div class="col-md-9 col-xs-4" ng-controller="SecondController">
+      <div ng-repeat="movie in movies">
+        <div class="col-md-4">
+          <h1>{{movie.name}}</h1>
+          <p>{{movie.desc}}</p>
+          <p>{{movie.director}}</p>
+          <p>{{movie.length}}</p>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
