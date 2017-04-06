@@ -3,12 +3,7 @@ var myApp = angular.module("myApp", []);
 myApp.controller("FirstController", [ "$scope", "OnlyService", function($scope, OnlyService){
 console.log("FirstController hit!");
   $scope.allMovies = OnlyService.allMovies;
-  $scope.newMovie = {
-        name: "",
-        desc: "",
-        director: "",
-        length: ""
-      };
+  $scope.newMovie = OnlyService.movieForm;
   $scope.addMovie = OnlyService.addMovie;
 
 }]);
@@ -29,6 +24,13 @@ console.log("OnlyService hit!");
         movies: []
       };
 
+  var movieForm = {
+      name: "",
+      desc: "",
+      director: "",
+      length: ""
+    };
+
   var addMovie = function(name, desc, director, length){
     var movie = {
       name: name,
@@ -37,12 +39,16 @@ console.log("OnlyService hit!");
       length: length
     };
     allMovies.movies.push(movie);
-    console.log(allMovies.movies);
+    movieForm.name = "";
+    movieForm.desc = "";
+    movieForm.director = "";
+    movieForm.length = "";
   };
 
   return {
     allMovies: allMovies,
     addMovie: addMovie,
+    movieForm: movieForm
   };
 
 }]);

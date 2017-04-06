@@ -1,0 +1,57 @@
+body{
+  text-align: center;
+  background-color: lightsteelblue;
+  padding: 20px;
+}
+
+#topHeader{
+  color: navy;
+  border: 2px solid navy;
+  background-color: lightgrey;
+}
+
+.inputsDivHere{
+  color: navy;
+  border: 2px solid navy;
+  background-color: lightgrey;
+}
+
+.myInputs{
+  margin: 10px;
+}
+
+.eachMovieHere{
+  margin: 10px;
+  border: 2px solid navy;
+  background-color: lightgrey;
+  color: steelblue;
+  text-align: left;
+  padding: 10px;
+}
+
+.theTitles{
+  color: navy;
+}
+
+.specialHead2{
+  border: 2px solid whitesmoke;
+  background-color: darkgrey;
+  color: navy;
+}
+
+.glyphicon{
+  font-size: 45px;
+  float: right;
+  color: black;
+}
+
+.infoWrap{
+  border: 2px solid grey;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.blackText{
+  color: black;
+  padding-right: 5px;
+}

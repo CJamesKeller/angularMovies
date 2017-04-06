@@ -12,24 +12,29 @@
 
   </head>
   <body>
-    <div class="col-md-3 col-xs-4" ng-controller="FirstController">
-      <input type="text" ng-model="newMovie.name" placeholder="movie name">
+    <h1 id="topHeader">Add in your favorite movies!</h1>
+    <div class="col-md-3 col-xs-4 inputsDivHere" ng-controller="FirstController">
+      <h2 class="specialHead2">Add in your movie here:</h2>
+      <input class="myInputs" type="text" ng-model="newMovie.name" placeholder="movie name">
       <br>
-      <input type="text" ng-model="newMovie.desc" placeholder="movie description">
+      <input class="myInputs" type="text" ng-model="newMovie.desc" placeholder="movie description">
       <br>
-      <input type="text" ng-model="newMovie.director" placeholder="director name">
+      <input class="myInputs" type="text" ng-model="newMovie.director" placeholder="director name">
       <br>
-      <input type="text" ng-model="newMovie.length" placeholder="movie length">
+      <input class="myInputs" type="text" ng-model="newMovie.length" placeholder="movie length">
       <br>
-      <button type="button" ng-click="addMovie(newMovie.name, newMovie.desc, newMovie.director, newMovie.length)">Submit</button>
+      <button class="myInputs" type="button" ng-click="addMovie(newMovie.name, newMovie.desc, newMovie.director, newMovie.length)">Submit</button>
     </div>
     <div class="col-md-9 col-xs-4" ng-controller="SecondController">
-      <div ng-repeat="movie in movies">
-        <div class="col-md-4">
-          <h1>{{movie.name}}</h1>
-          <p>{{movie.desc}}</p>
-          <p>{{movie.director}}</p>
-          <p>{{movie.length}}</p>
+      <div ng-repeat="movie in movies" class="outerWrap">
+        <div class="col-md-4 eachMovieHere">
+          <span class="glyphicon glyphicon-film"></span>
+          <h1 class="theTitles">{{movie.name}}</h1>
+          <div class="infoWrap">
+            <p><span class="blackText">Plot:</span>{{movie.desc}}</p>
+            <p><span class="blackText">Director:</span>{{movie.director}}</p>
+            <p><span class="blackText">Time:</span>{{movie.length}}</p>
+          </div>
         </div>
       </div>
     </div>
